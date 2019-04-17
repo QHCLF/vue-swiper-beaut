@@ -36,7 +36,7 @@
             },
             perspective: {
                 type: [Number, String],
-                default: 35
+                default: 10
             },
             display: {
                 type: [Number, String],
@@ -56,11 +56,11 @@
             },
             width: {
                 type: [Number, String],
-                default: 360
+                default: 200
             },
             height: {
                 type: [Number, String],
-                default: 270
+                default: 200
             },
             border: {
                 type: [Number, String],

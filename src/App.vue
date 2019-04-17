@@ -2,7 +2,6 @@
   <div id="app">
 <!--    <img alt="Vue logo" src="./assets/logo.png">-->
 <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-
       <swiperBeaut>
           <slide v-for="(item, index) in items" :index="index">
               <img :src="item.img">
@@ -38,7 +37,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -47,4 +46,8 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+    swiperBeaut{
+        width: 5rem;
+    }
+
 </style>

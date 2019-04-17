@@ -4,6 +4,9 @@
          :class="computeClass"
          @click="goTo()"
     >
+        <div class="mengc"
+             v-show="!isCurrent"
+        ></div>
         <slot :index="index"
               :isCurrent="isCurrent"
               :leftIndex="leftIndex"
@@ -55,7 +58,7 @@
                     }
                 }
                     return Object.assign(styles, {
-                        'border-width': this.parent.border + 'px',
+                        //'border-width': this.parent.border + 'px',
                         'width': this.parent.slideWidth + 'px',
                         'height': this.parent.slideHeight + 'px',
                         'transition': ' transform ' + this.parent.animationSpeed + 'ms, ' +
@@ -123,10 +126,10 @@
         visibility: hidden;
         overflow: hidden;
         top: 0;
-        border-radius: 1px;
-        border-color: #000;
-        border-color: rgba(0, 0, 0, 0.4);
-        border-style: solid;
+        /*border-radius: 1px;*/
+        /*border-color: #000;*/
+        /*border-color: rgba(0, 0, 0, 0.4);*/
+        /*border-style: solid;*/
         background-size: cover;
         background-color: #ccc;
         display: block;
@@ -147,5 +150,13 @@
         visibility: visible !important;
         transform: none !important;
         z-index: 999;
+    }
+
+    .slide .mengc{
+        width: 100%;
+        height: 202px;
+        position: absolute;
+        background: white;
+        opacity: 0.5;
     }
 </style>
